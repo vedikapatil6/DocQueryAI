@@ -16,10 +16,9 @@ app = FastAPI(
     version="1.0"
 )
 
-# Allow frontend (localhost:3000) to talk to backend (localhost:8000)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, make this restrictive
+    allow_origins=["*"],  
     allow_methods=["*"],
     allow_headers=["*"],
 )
